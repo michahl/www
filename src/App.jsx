@@ -4,7 +4,7 @@ const App = () => {
       <div className="flex justify-center min-h-screen">
         <div className="w-full max-w-sm text-slate-700">
           <div className="flex space-x-2 font-medium mb-4">
-            <a href="/" className="text-blue-700 underline underline-offset-4">@</a>
+            <a href="/" className="text-slate-900 underline underline-offset-4">@</a>
             <p>/</p>
             <a href="https://github.com/michahl" target="_blank" className="text-blue-700 underline underline-offset-4">github</a>
             <p>/</p>
