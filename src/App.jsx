@@ -1,6 +1,6 @@
 const App = () => {
   return (
-    <div className="bg-[#fafafa] font-body mx-5 mt-3">
+    <div className="font-body mx-5 mt-3">
       <div className="flex justify-center min-h-screen">
         <div className="w-full max-w-sm">
           <div className="flex space-x-2 font-medium mb-4">
