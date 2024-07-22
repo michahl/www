@@ -3,5 +3,5 @@
 @tailwind utilities;
 
 body {
-    @apply bg-[#fafafa];
+    @apply font-body bg-[#fafafa]{/* dark:bg-zinc-900 */};
 }
