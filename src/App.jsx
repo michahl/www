@@ -2,7 +2,7 @@ const App = () => {
   return (
     <div className="font-body mx-5 mt-3">
       <div className="flex justify-center min-h-screen">
-        <div className="w-full max-w-sm">
+        <div className="w-full max-w-sm text-slate-700">
           <div className="flex space-x-2 font-medium mb-4">
             <a href="/" className="text-blue-700 underline underline-offset-4">@</a>
             <p>/</p>
