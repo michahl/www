@@ -10,7 +10,13 @@ const App = () => {
 
               <div className='flex flex-row justify-start items-center'>
                 <h1 className='text-lg text-slate-900 mr-20'>Michail Christoforatos</h1>
-              </div>              
+
+                <div className='gap-2 flex flex-row justify-start items-center mx-4'>
+                <a href="https://twitter.com/cht5m" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'><img src={assets.twitter} alt="twitter" /></a>
+                <a href="https://linkedin.com/in/michahl" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'><img src={assets.linkedin} alt="linkedin" /></a>
+                <a href="https://github.com/michahl" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'><img src={assets.github} alt="github" /></a>
+              </div>  
+              </div>            
             </div>
           </div>
           <p className='text-sm text-slate-500'>
@@ -46,17 +52,12 @@ const App = () => {
           <div className='flex flex-col justify-start mt-10'>
             <div>
               <div className='flex items-center'>
-                <img src={assets.pointer} alt="pointer" className='w-5 h-5 mr-1' />
-                <p className='text-sm text-slate-700'>Sparti, Greece</p>
+                {/*<img src={assets.pointer} alt="pointer" className='w-4 h-4 mr-1' />*/}
+                <p className='text-sm text-slate-500'>Sparti, Greece</p>
               </div>
-              <div className='mt-1'>
-                <img src={assets.map} alt="map" className='w-96 rounded-xl select-none'/>
-
-              </div>
+              <a href="mailto:hi@michahl.com" className='text-sm text-slate-700'>hi@michahl.com</a>
             </div>
-
           </div>
-          
         </div>
       </div>
     </div>
