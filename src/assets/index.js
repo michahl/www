@@ -6,8 +6,6 @@ import mail from './icons/mail.svg'
 import open from './icons/open.svg'
 import pointer from './icons/pointer.svg'
 
-import map from './map.jpeg'
-
 export default {
     twitter,
     github,
@@ -15,6 +13,5 @@ export default {
     code,
     mail,
     open,
-    pointer,
-    map
+    pointer
 }

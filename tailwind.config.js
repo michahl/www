@@ -11,11 +11,11 @@ export default {
     },
     extend: {
       animation: {
-        fade_1: 'fadeIn 0.75s ease-out',
-        fade_2: 'fadeIn 1s ease-out',
+        fade_1: 'fadeIn 1s ease-out',
+        fade_2: 'fadeIn 1.25s ease-out',
         fade_3: 'fadeIn 1.5s ease-out',
-        fade_4: 'fadeIn 2s ease-out',
-        fade_5: 'fadeIn 2.5s ease-out',
+        fade_4: 'fadeIn 1.75s ease-out',
+        fade_5: 'fadeIn 2s ease-out',
       },
 
       keyframes: {

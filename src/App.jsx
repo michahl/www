@@ -1,4 +1,5 @@
 import assets from './assets/index'
+import Projects from './components/Projects'
 
 const App = () => {
   return (
@@ -22,33 +23,7 @@ const App = () => {
           <p className='text-sm text-slate-500 animate-fade_2'>
             Software Engineer proficient in building digital products. Skilled with tools like VSCode, Postman, and Git. Experienced with Next.js, TypeScript, React, Tailwind, Node, Express, MongoDB, and SQL. Currently learning Swift. I enjoy football, gaming, and spending time with my family.
           </p>
-          <div className='flex flex-col justify-start items-start mt-10'>
-            <div className='mb-4'>
-              <div className='flex flex-row justify-start items-center gap-2 w-fit mb-1 animate-fade_3'>
-                <img src={assets.code} alt="code" width={20}/>
-                <p className='text-slate-700 text-sm'>Projects</p>
-              </div>
-
-            </div>
-
-            <div className='flex flex-col ga-6'>
-              <div className='flex flex-col animate-fade_4'>
-                <a href=""
-                   target='_blank'
-                   className='text-slate-500 hover:text-slate-700 hover:border-slate-700 text-sm border-b transition-colors mb-2 w-fit group flex flex-row items-center'
-                >
-                  Project name
-                  <img src={assets.open} alt="open"
-                      className='w-3 h-3 text-slate-500 ml-1 group-hover:text-slate-700'
-                  />
-                </a>
-                <p className='text-sm text-slate-500'>Project description</p>
-
-              </div>
-
-            </div>
-
-          </div>
+          <Projects />
           <div className='flex flex-col justify-start mt-10'>
             <div className='animate-fade_5'>
               <div className='flex items-center'>
