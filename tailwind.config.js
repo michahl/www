@@ -10,7 +10,26 @@ export default {
       'body' : ['Rubik']
     },
     extend: {
-      
+      animation: {
+        fade_1: 'fadeIn 0.75s ease-out',
+        fade_2: 'fadeIn 1s ease-out',
+        fade_3: 'fadeIn 1.5s ease-out',
+        fade_4: 'fadeIn 2s ease-out',
+        fade_5: 'fadeIn 2.5s ease-out',
+      },
+
+      keyframes: {
+        fadeIn: {
+          '0%': {
+            opacity: '0',
+            transform: 'translateY(-20px)',
+          },
+          '100%': {
+            opacity: '1',
+            transform: 'translateY(0)',
+          },
+        },
+      },
     },
   },
   plugins: [],

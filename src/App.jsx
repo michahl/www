@@ -6,7 +6,7 @@ const App = () => {
       <div className='w-full max-w-3xl'>
         <div className='mx-10 md:mx-0 selection:bg-slate-700 selection:text-white'>
           <div className='flex flex-row justify-start items-start mb-1 w-full'>
-            <div className='flex flex-row justify-between items-center w-full mb-2'>
+            <div className='flex flex-row justify-between items-center w-full mb-2 animate-fade_1'>
 
               <div className='flex flex-row justify-start items-center'>
                 <h1 className='text-lg text-slate-900 mr-20'>Michail Christoforatos</h1>
@@ -19,12 +19,12 @@ const App = () => {
               </div>            
             </div>
           </div>
-          <p className='text-sm text-slate-500'>
+          <p className='text-sm text-slate-500 animate-fade_2'>
             Software Engineer proficient in building digital products. Skilled with tools like VSCode, Postman, and Git. Experienced with Next.js, TypeScript, React, Tailwind, Node, Express, MongoDB, and SQL. Currently learning Swift. I enjoy football, gaming, and spending time with my family.
           </p>
           <div className='flex flex-col justify-start items-start mt-10'>
             <div className='mb-4'>
-              <div className='flex flex-row justify-start items-center gap-2 w-fit mb-1'>
+              <div className='flex flex-row justify-start items-center gap-2 w-fit mb-1 animate-fade_3'>
                 <img src={assets.code} alt="code" width={20}/>
                 <p className='text-slate-700 text-sm'>Projects</p>
               </div>
@@ -32,7 +32,7 @@ const App = () => {
             </div>
 
             <div className='flex flex-col ga-6'>
-              <div className='flex flex-col'>
+              <div className='flex flex-col animate-fade_4'>
                 <a href=""
                    target='_blank'
                    className='text-slate-500 hover:text-slate-700 hover:border-slate-700 text-sm border-b transition-colors mb-2 w-fit group flex flex-row items-center'
@@ -50,7 +50,7 @@ const App = () => {
 
           </div>
           <div className='flex flex-col justify-start mt-10'>
-            <div>
+            <div className='animate-fade_5'>
               <div className='flex items-center'>
                 {/*<img src={assets.pointer} alt="pointer" className='w-4 h-4 mr-1' />*/}
                 <p className='text-sm text-slate-500'>Sparti, Greece</p>
