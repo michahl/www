@@ -3,15 +3,12 @@ import assets from '../assets/index'
 
 const Projects = () => {
    if (data.projects.length > 0) return (
-        <div className='flex flex-col justify-start items-start mt-10'>
-            <div className='mb-4'>
-              <div className='flex flex-row justify-start items-center gap-2 w-fit mb-1 animate-fade_3'>
-                <img src={assets.code} alt="code" width={20}/>
-                <p className='text-slate-700 text-sm'>Projects</p>
-              </div>
+        <div className='flex flex-col mt-5'>
+            <div className='animate-fade_3 border-b pb-1'>
+              <p className='text-slate-900'>projects 🏗️</p>
             </div>
 
-            <div className='flex flex-col gap-6 animate-fade_4'>
+            <div className='flex flex-col gap-6 animate-fade_4 mt-3'>
               {
                 data.projects.map( project => (
                     <div className='flex flex-col' key={project.name}>
