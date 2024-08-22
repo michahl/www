@@ -6,8 +6,8 @@ const App = () => {
   return (
     <div className='w-full flex flex-col justify-center items-center min-h-screen'>
       <div className='w-full max-w-2xl'>
-        <div className=' selection:bg-slate-700 selection:text-white'>
-          <div className='flex flex-row justify-start items-start mb-1 w-full'>
+        <div className='mx-10 lg:mx-0 selection:bg-slate-700 selection:text-white'>
+          <div className='flex flex-row justify-center items-start mb-1 w-full'>
             <div className='flex flex-row justify-between items-center w-full mb-0 animate-fade_1'>
 
               <div className='flex flex-row justify-start items-center'>
