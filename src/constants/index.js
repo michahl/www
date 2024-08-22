@@ -1,9 +1,5 @@
 const projects = [
-    {
-        name: 'Project name',
-        description: 'Project description',
-        url: ''
-    }
+
 ]
 
 const tags = [
