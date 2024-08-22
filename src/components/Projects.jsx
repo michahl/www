@@ -2,7 +2,7 @@ import data from '../constants/index'
 import assets from '../assets/index'
 
 const Projects = () => {
-    return (
+   if (data.projects.length > 0) return (
         <div className='flex flex-col justify-start items-start mt-10'>
             <div className='mb-4'>
               <div className='flex flex-row justify-start items-center gap-2 w-fit mb-1 animate-fade_3'>
@@ -28,7 +28,6 @@ const Projects = () => {
                     </div>
                 ))
               }
-
             </div>
 
         </div>
