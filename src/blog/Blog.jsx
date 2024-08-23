@@ -24,7 +24,7 @@ const Blog = () => {
           <div>
             <p className='text-xs text-zinc-500 mb-3'>Published on {blog.date}</p>
 
-            <h1>{blog.title}</h1>
+            <h1 className='border-b pb-2 mb-3 text-lg font-medium'>{blog.title}</h1>
 
             <div dangerouslySetInnerHTML={{ __html: blog.content }}/>
           </div>
