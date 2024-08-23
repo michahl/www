@@ -11,15 +11,10 @@ const email = 'hi@michahl.com'
 const blogs = {
     'typescript-function-syntaxes': {
         title: 'TypeScript Function Syntaxes',
+        ltitle: 'typescript function syntaxes',
         date: '23/08/2024',
-        content: ``,
+        content: `<p class='text-blue-500'>testing</p>`,
         shortDescription: 'examples of typescript function syntaxes'
-    },
-    'text': {
-        title: 'test',
-        date: '23/08/2024',
-        content: ``,
-        shortDescription: 'examples of typescript function test'
     }
 }
 

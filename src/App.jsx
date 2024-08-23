@@ -1,8 +1,19 @@
+import { useEffect, useState } from 'react'
 import assets from './assets/index'
 import Projects from './components/Projects'
 import Tags from './components/Tags'
+import info from './constants/index'
 
 const App = () => {
+  const [blog, setBlog] = useState([])
+  useEffect(() => {
+    const arrBlogs = Object.entries(info.blogs).map(([url, blog]) => ({
+      url,
+      ...blog
+    }))
+    setBlog(arrBlogs[arrBlogs.length-1])
+  }, [])
+
   return (
     <div className='w-full flex flex-col justify-center items-center min-h-screen'>
       <div className='w-full max-w-2xl'>
@@ -29,13 +40,15 @@ const App = () => {
           <div className='mt-5 animate-fade_3'>
             <p className='border-b pb-1'>latest blog 📖</p>
 
-            <a href="/blog/typescript-function-syntaxes" target='_blank'>
+            {/*latest blog*/}
+
+            <a href={`/blog/${blog.url}`} target='_blank'>
               <div className='flex flex-row justify-between items-center text-sm mt-2 group cursor-pointer animate-fade_4'>
                 <div className='flex flex-col'>
-                  <p className='group-hover:underline text-slate-900'>typescript function syntaxes</p>
-                  <p className='text-slate-600'>examples of typescript function syntaxes</p>
+                  <p className='group-hover:underline text-slate-900'>{blog.ltitle}</p>
+                  <p className='text-slate-600'>{blog.shortDescription}</p>
                 </div>
-                <p className='text-xs text-slate-900'>22/8/2024</p>
+                <p className='text-xs text-slate-900'>{blog.date}</p>
               </div>
             </a>
 
