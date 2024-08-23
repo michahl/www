@@ -14,7 +14,7 @@ const BlogList = () => {
 
   return (
     <div className='w-full flex flex-col justify-start items-center min-h-screen relative'>
-      <div className='w-full max-w-3xl mt-20'>
+      <div className='w-full max-w-3xl mt-5 lg:mt-14'>
         <div className='mx-10 lg:mx-0 selection:bg-slate-700 selection:text-white'>
           <div className='flex justify-end'>
             <a href="/" className='mt-2 flex flex-row items-center space-x-1.5 hover:bg-zinc-200 hover:rounded-md px-3 py-2 ease-in-out duration-300 transition-all'>
