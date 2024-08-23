@@ -29,7 +29,7 @@ const App = () => {
           <div className='mt-5 animate-fade_3'>
             <p className='border-b pb-1'>latest blog 📖</p>
 
-            <a href="https://blog.michahl.com/post/66c71a63777bc4f4cc9f0d43" target='_blank'>
+            <a href="/blog/typescript-function-syntaxes" target='_blank'>
               <div className='flex flex-row justify-between items-center text-sm mt-2 group cursor-pointer animate-fade_4'>
                 <div className='flex flex-col'>
                   <p className='group-hover:underline text-slate-900'>typescript function syntaxes</p>
