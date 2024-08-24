@@ -1,4 +1,9 @@
 const projects = [
+  {
+    name: 'BugScout',
+    url: 'https://bugscout.michahl.com',
+    description: 'Designed to help developers discover good first issues.'
+  }
 
 ]
 
