@@ -59,7 +59,7 @@ const App = () => {
                 {/*<img src={assets.pointer} alt="pointer" className='w-4 h-4 mr-1' />*/}
                 <p className='text-sm text-slate-500'>Sparti, Greece</p>
               </div>
-              <a href="mailto:hi@michahl.com" className='text-sm text-slate-700'>hi@michahl.com</a>
+              <a href={`mailto:${info.email}`} className='text-sm text-slate-700'>{info.email}</a>
             </div>
           </div>
         </div>
