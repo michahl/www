@@ -37,10 +37,8 @@ const App = () => {
           </p>*/}
           <Tags />
           <Projects />
-          <div className='mt-5 animate-fade_3'>
+          {/*<div className='mt-5 animate-fade_3'>
             <p className='border-b pb-1'>latest blog 📖</p>
-
-            {/*latest blog*/}
 
             <a href={`/blog/${blog.url}`} target='_blank'>
               <div className='flex flex-row justify-between items-center text-sm mt-2 group cursor-pointer animate-fade_4'>
@@ -52,7 +50,7 @@ const App = () => {
               </div>
             </a>
 
-          </div>
+          </div> */}
           <div className='flex flex-col justify-start mt-5'>
             <div className='animate-fade_5'>
               <div className='flex items-center'>
