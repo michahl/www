@@ -12,7 +12,7 @@ const tags = [
     'Software Engineer', 'Fullstack Developer'
 ]
 
-const email = 'contact@michahl.com'
+const email = 'hi@michahl.com'
 
 const blogs = {
     'typescript-function-syntaxes': {
