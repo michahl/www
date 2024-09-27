@@ -3,17 +3,9 @@ import assets from './assets/index'
 import Projects from './components/Projects'
 import Tags from './components/Tags'
 import info from './constants/index'
+import Blogs from './components/Blogs'
 
 const App = () => {
-  const [blog, setBlog] = useState([])
-  useEffect(() => {
-    const arrBlogs = Object.entries(info.blogs).map(([url, blog]) => ({
-      url,
-      ...blog
-    }))
-    setBlog(arrBlogs[arrBlogs.length-1])
-  }, [])
-
   return (
     <div className='w-full flex flex-col justify-center items-center min-h-screen'>
       <div className='w-full max-w-2xl'>
@@ -37,24 +29,10 @@ const App = () => {
           </p>*/}
           <Tags />
           <Projects />
-          {/*<div className='mt-5 animate-fade_3'>
-            <p className='border-b pb-1'>latest blog 📖</p>
-
-            <a href={`/blog/${blog.url}`} target='_blank'>
-              <div className='flex flex-row justify-between items-center text-sm mt-2 group cursor-pointer animate-fade_4'>
-                <div className='flex flex-col'>
-                  <p className='group-hover:underline text-slate-900'>{blog.ltitle}</p>
-                  <p className='text-slate-600'>{blog.shortDescription}</p>
-                </div>
-                <p className='text-xs text-slate-900'>{blog.date}</p>
-              </div>
-            </a>
-
-          </div> */}
+          <Blogs />
           <div className='flex flex-col justify-start mt-5'>
             <div className='animate-fade_5'>
               <div className='flex items-center'>
-                {/*<img src={assets.pointer} alt="pointer" className='w-4 h-4 mr-1' />*/}
                 <p className='text-sm text-slate-500'>Sparti, Greece</p>
               </div>
               <a href={`mailto:${info.email}`} className='text-sm text-slate-700'>{info.email}</a>
