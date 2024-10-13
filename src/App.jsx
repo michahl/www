@@ -5,6 +5,10 @@ import Tags from './components/Tags'
 import info from './constants/index'
 import Blogs from './components/Blogs'
 
+import { FiGithub } from 'react-icons/fi'
+import { RiTwitterXLine } from 'react-icons/ri'
+import { FiLinkedin } from "react-icons/fi"
+
 const App = () => {
   return (
     <div className='w-full flex flex-col justify-center items-center min-h-screen'>
@@ -15,21 +19,22 @@ const App = () => {
 
               <div className='flex flex-row justify-between items-center'>
                 <h1 className='text-lg text-slate-900 mr-20'>Michail Christoforatos</h1>
-
                 <div className='gap-2 flex flex-row justify-start items-center mx-4 select-none'>
-                  <a href="https://twitter.com/cht5m" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'><img src={assets.twitter} alt="twitter" /></a>
-                  <a href="https://linkedin.com/in/michahl" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'><img src={assets.linkedin} alt="linkedin" /></a>
-                  <a href="https://github.com/michahl" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'><img src={assets.github} alt="github" /></a>
+                  <a href="https://twitter.com/cht5m" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'>
+                    <RiTwitterXLine />
+                  </a>
+                  <a href="https://linkedin.com/in/michahl" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'>
+                    <FiLinkedin />  
+                  </a>
+                  <a href="https://github.com/michahl" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'>
+                    <FiGithub />
+                  </a>
                 </div>  
               </div>            
             </div>
           </div>
-          {/*<p className='text-sm text-slate-500 animate-fade_2'>
-            Software Engineer proficient in building digital products. Skilled with tools like VSCode, Postman, and Git. Experienced with Next.js, TypeScript, React, Tailwind, Node, Express, MongoDB, and SQL. Currently learning Swift. I enjoy football, gaming, and spending time with my family.
-          </p>*/}
           <Tags />
           <Projects />
-          <Blogs />
           <div className='flex flex-col justify-start mt-5'>
             <div className='animate-fade_5'>
               <div className='flex items-center'>
