@@ -1,4 +1,4 @@
-## personalOS
+## michahl
 
-
-[michahl.com](https://michahl.com)
+- [@/](https://michahl.com)
+- [GitHub](https://github.com)

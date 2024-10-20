@@ -12,13 +12,13 @@ import { FiLinkedin } from "react-icons/fi"
 const App = () => {
   return (
     <div className='w-full flex flex-col justify-center items-center min-h-screen'>
-      <div className='w-full max-w-2xl'>
+      <div className='w-full max-w-2xl my-5 sm:my-0'>
         <div className='mx-10 lg:mx-0 selection:bg-slate-700 selection:text-white'>
           <div className='flex flex-row justify-center items-start mb-1 w-full'>
             <div className='flex flex-row justify-between items-center w-full mb-0 animate-fade_1'>
 
               <div className='flex flex-row justify-between items-center'>
-                <h1 className='text-lg text-slate-900 mr-20'>Michail Christoforatos</h1>
+                <h1 className='text-base text-slate-900 mr-20'>Michail Christoforatos</h1>
                 <div className='gap-2 flex flex-row justify-start items-center mx-4 select-none'>
                   <a href="https://twitter.com/cht5m" target='_blank' className='h-4 w-4 text-slate-600 hover:text-slate-700 transition-colors'>
                     <RiTwitterXLine />
@@ -35,6 +35,7 @@ const App = () => {
           </div>
           <Tags />
           <Projects />
+          <Blogs />
           <div className='flex flex-col justify-start mt-5'>
             <div className='animate-fade_5'>
               <div className='flex items-center'>

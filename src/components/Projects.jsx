@@ -8,21 +8,25 @@ const Projects = () => {
               <p className='text-slate-900'>projects 🏗️</p>
             </div>
 
-            <div className='flex flex-col gap-6 animate-fade_4 mt-3'>
+            <div className='grid grid-cols-1 sm:grid-cols-2 gap-4 animate-fade_4 mt-3'>
               {
                 data.projects.map( project => (
-                    <div className='flex flex-col' key={project.name}>
-                        <a  href={project.url}
-                            target='_blank'
-                            className='text-slate-500 hover:text-slate-700 hover:border-slate-700 text-sm border-b transition-colors mb-2 w-fit group flex flex-row items-center'
-                        >
-                            {project.name}
-                            <img src={assets.open} alt="open"
-                                className='w-3 h-3 text-slate-500 ml-1 group-hover:text-slate-700'
-                            />
-                        </a>
-                        <p className='text-sm text-slate-500'>{project.description}</p>
-                    </div>
+                    <a 
+                        href={project.url}
+                        target='_blank'
+                        className='flex flex-col border p-3 rounded-xl group hover:bg-slate-50 hover:shadow-sm min-w-56' 
+                        key={project.name}
+                    >
+                        <img src={project.img} alt={project.name} className='rounded-lg'/>
+                        <div className='leading-tight mt-1.5'>
+                            <p  
+                                className='text-slate-500 group-hover:text-slate-700 border-b group-hover:border-slate-700 text-sm transition-colors mb-0.5 w-fit group flex flex-row items-center'
+                            >
+                                {project.name}
+                            </p>
+                            <p className='text-sm text-slate-500'>{project.description}</p>
+                        </div>
+                    </a>
                 ))
               }
             </div>
