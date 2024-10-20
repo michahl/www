@@ -9,6 +9,19 @@ const rubik = Rubik({
 export const metadata = {
   title: "@michahl",
   description: "Software Developer",
+  keywords: "michahl",
+  author: "@michahl",
+  icons: {
+    icon: "https://github.com/michahl.png",
+    appleIcon: "https://github.com/michahl.png",
+    appleTouchIcon: "https://github.com/michahl.png"
+  },
+  openGraph: {
+    title: "@michahl",
+    description: "Software Developer",
+    url: "https://michahl.com",
+    type: "website",
+  }
 };
 
 export default function RootLayout({ children }) {
