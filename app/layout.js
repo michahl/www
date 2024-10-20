@@ -1,4 +1,5 @@
 import { Rubik } from "next/font/google";
+import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const rubik = Rubik({
@@ -7,20 +8,42 @@ const rubik = Rubik({
 });
 
 export const metadata = {
-  title: "@michahl",
-  description: "Software Developer",
-  keywords: "michahl",
-  author: "@michahl",
+  metadataBase: new URL(siteConfig.url),
+  title: {
+    default: siteConfig.name,
+    template: `%s | ${siteConfig.name}`
+  },
+  description: siteConfig.description,
+  keywords: [
+    "michahl christoforatos",
+    "michahl christoforatos portfolio",
+    "michahl",
+    "michahl portfolio",
+    "michahl github",
+    "michahl developer"
+  ],
+  author: [
+    {
+      name: siteConfig.name,
+      url: siteConfig.url
+    }
+  ],
+  creator: "michahl",
+  openGraph: {
+    type: "website",
+    locale: "en_US",
+    url: siteConfig.url,
+    title: siteConfig.name,
+    description: siteConfig.description,
+    siteName: siteConfig.name,
+  },
+  twitter: {
+    title: siteConfig.name,
+    description: siteConfig.description,
+    creator: "@michahl",
+  },
   icons: {
     icon: "https://github.com/michahl.png",
-    appleIcon: "https://github.com/michahl.png",
-    appleTouchIcon: "https://github.com/michahl.png"
-  },
-  openGraph: {
-    title: "@michahl",
-    description: "Software Developer",
-    url: "https://michahl.com",
-    type: "website",
   }
 };
 
