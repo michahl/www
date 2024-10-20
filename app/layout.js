@@ -3,15 +3,15 @@ import { siteConfig } from "@/config/site";
 import "./globals.css";
 
 const rubik = Rubik({
-  weight: ['300', '400', '500', '600', '700', '800', '900'],
+  weight: ['400'],
   subsets: ["latin"],
 });
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),
   title: {
-    default: siteConfig.name,
-    template: `%s | ${siteConfig.name}`
+    default: siteConfig.username,
+    template: `%s | ${siteConfig.username}`
   },
   description: siteConfig.description,
   keywords: [
@@ -24,7 +24,7 @@ export const metadata = {
   ],
   author: [
     {
-      name: siteConfig.name,
+      name: siteConfig.username,
       url: siteConfig.url
     }
   ],

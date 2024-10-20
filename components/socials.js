@@ -4,7 +4,7 @@ export default function Socials() {
     return (
         <div className="flex justify-center">
             <div className="fixed bottom-5">
-                <div className="flex flex-row border rounded-lg">
+                <div className="flex flex-row  rounded-lg">
                 {
                     socialLinks.map((social, index) => (
                     <a 
@@ -12,12 +12,12 @@ export default function Socials() {
                         target="_blank"
                         href={social.href}
                         className={`
-                            flex items-center justify-center p-3.5
-                            hover:bg-zinc-50 rounded-l-lg
-                            ${index + 1 === socialLinks.length ? 'rounded-r-lg' : 'border-r'}
+                            text-slate-600 hover:text-slate-800 transition-colors
+                            flex items-center justify-center p-1
+                            
                         `}
                     >
-                        <social.icon className="w-5 h-5" />
+                        <social.icon className="p-3 rounded-md w-10 h-10" />
                     </a>
                     ))
                 }
