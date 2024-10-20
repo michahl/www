@@ -1,15 +1,15 @@
 const projects = [
   {
-    name: 'BugScout',
+    name: 'bugscout',
     img: '/assets/bugscout.png',
-    url: 'https://bugscout.michahl.com',
-    description: 'Discover "good first issues" on GitHub.'
+    url: 'https://github.com/michahl/goodissues',
+    description: 'find "good first issues" on github'
   },
   {
-    name: 'Global Warming',
+    name: 'global warming charts',
     img: '/assets/gwd.png',
-    url: 'https://global-warming-data.vercel.app/data',
-    description: 'Visualising global warming data with charts.'
+    url: 'https://github.com/michahl/global-warming-charts',
+    description: 'visualising global warming data with charts'
   },
 
 ]

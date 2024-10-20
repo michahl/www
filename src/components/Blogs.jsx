@@ -18,15 +18,15 @@ const Blogs = () => {
   }, [])
   return (
     <div className='mt-5 animate-fade_3'>
-        <p className='border-b pb-1'>latest blog 📖</p>
+        <p className='border-b pb-1'>posts</p>
 
         <a href={`https://blog.michahl.com/blog/${post.url}`} target='_blank'>
             <div className='flex flex-row justify-between items-center text-sm mt-2 group cursor-pointer animate-fade_4'>
-                <div className='flex flex-col'>
-                  <p className='group-hover:underline text-slate-900'>{post.title}</p>
-                  <p className='text-slate-600'>{post.shortDes}</p>
-                </div>
-                <p className='text-xs text-slate-900'>{post.date}</p>
+                <ul className='list-disc list-inside'>
+                  <li className='text-slate-500 group-hover:text-slate-700'>
+                    <span className='text-blue-700/85 font-[425]'>{post.title}</span>
+                  </li>
+                </ul>
             </div>
         </a>
 
