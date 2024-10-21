@@ -11,10 +11,10 @@ export default function Blogs() {
             <ul className="list-disc list-inside">
                 {
                     posts.map(post => (
-                        <li key={post.slug}>
+                        <li key={post.slug} className="text-sm">
                             <Link
                                 href={`/b/${post.slug}`}
-                                className="text-blue-600 hover:text-blue-800"
+                                className="relative -left-0.5 sm:-left-1.5 text-base text-blue-600 hover:text-blue-800 transition-transform"
                             >
                                 {post.frontmatter.title.toLowerCase()}
                             </Link>

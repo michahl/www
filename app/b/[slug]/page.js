@@ -36,8 +36,8 @@ export default async function PostPage({ params }) {
       <div className="max-w-2xl w-full mx-2 sm:mx-5">
         <div className="mt-14">
           <article>
-            <h1 className="leading-4">{frontmatter.title}</h1>
-            <p className="text-[#d9d9d9] font-light text-[16px]">Michail Christoforatos</p>
+            <h1 className="leading-4 font-medium">{frontmatter.title}</h1>
+            <p className="text-[#d9d9d9] font-light text-[15.5px]">Michail Christoforatos</p>
             <div className="mt-10">
               <MdxLayout>{content}</MdxLayout>
             </div>
