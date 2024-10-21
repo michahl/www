@@ -1,11 +1,10 @@
-import { Rubik } from "next/font/google";
+import { Inter, Rubik } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
 
-const rubik = Rubik({
-  weight: ['400'],
-  subsets: ["latin"],
-});
+const inter = Inter({ subsets: ['latin'] });
+
+const rubik = Rubik({ subsets: ['latin'] });
 
 export const metadata = {
   metadataBase: new URL(siteConfig.url),

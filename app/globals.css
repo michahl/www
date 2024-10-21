@@ -3,5 +3,6 @@
 @tailwind utilities;
 
 body {
-    @apply text-slate-900 selection:bg-slate-700 selection:text-white/85
+    @apply bg-[#111111] text-[#f9f8fc] antialiased;
+    
 }
