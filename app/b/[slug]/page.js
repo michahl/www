@@ -3,7 +3,6 @@ import path from "path";
 import { readFile, access } from "fs/promises";
 import { notFound } from "next/navigation";
 import MdxLayout from "@/components/mdx-layout";
-import remarkGfm from "remark-gfm";
 
 const POSTS_FOLDER = path.join(process.cwd(), "posts");
 
@@ -35,7 +34,7 @@ export default async function PostPage({ params }) {
   return (
     <div className="flex justify-center min-h-screen">
       <div className="max-w-2xl w-full mx-2 sm:mx-5">
-        <div className="mt-20">
+        <div className="mt-14">
           <article>
             <h1 className="leading-4">{frontmatter.title}</h1>
             <p className="text-[#d9d9d9] font-light text-[16px]">Michail Christoforatos</p>
