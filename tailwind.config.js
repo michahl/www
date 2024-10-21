@@ -7,7 +7,7 @@ export default {
   ],
   theme: {
     fontFamily: {
-      'body' : ['Rubik']
+      'body' : ['Inter']
     },
     extend: {
       animation: {
