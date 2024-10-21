@@ -11,7 +11,7 @@ export default function Blogs() {
             <ul className="list-disc list-inside">
                 {
                     posts.map(post => (
-                        <li key={post.slug} className="">
+                        <li key={post.slug}>
                             <Link
                                 href={`/b/${post.slug}`}
                                 className="text-blue-600 hover:text-blue-800"
