@@ -34,9 +34,9 @@ export default async function PostPage({ params }) {
 
   return (
     <div className="flex flex-col items-center min-h-screen">
-      <div className="max-w-2xl w-full mx-2 sm:mx-5 flex-grow">
+      <div className="max-w-2xl w-full flex-grow">
         <div className="mt-14">
-          <article>
+          <article className="mx-2.5 sm:mx-5">
             <h1 className="leading-4 font-medium">{frontmatter.title}</h1>
             <p className="text-[#d9d9d9] font-light text-[15.5px]">Michail Christoforatos</p>
             <div className="my-10">
