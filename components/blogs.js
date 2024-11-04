@@ -4,6 +4,10 @@ import { getAllPosts } from "@/lib/posts"
 export default function Blogs() {
     const posts = getAllPosts();
 
+    if (posts.length === 0) {
+        return null;
+    }
+
     return (
         <div className="mt-5 mx-3.5">
             <p className="">journal</p>
