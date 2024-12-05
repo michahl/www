@@ -1,4 +1,5 @@
 import { SpeedInsights } from '@vercel/speed-insights/next';
+import { Analytics } from "@vercel/analytics/react"
 import { Inter, Rubik } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import "./globals.css";
@@ -62,6 +63,7 @@ export default function RootLayout({ children }) {
       <body className={rubik.className}>
         {children}
         <SpeedInsights />
+        <Analytics />
       </body>
     </html>
   );
