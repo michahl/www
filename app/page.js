@@ -13,6 +13,7 @@ export default function Home() {
               <p>
                 I&#39;m a <span className="italic font-serif cursor-context-menu">Software Developer</span> who believes in building creative and modern apps. 
               </p>
+              {/*
               <p>
                 Inspired by{" "}
                 <span 
@@ -25,6 +26,7 @@ export default function Home() {
                 </span>
                 , I embrace the stages of learning to continually enhance my skills and knowledge while exploring innovative approaches.
               </p>
+              */}
             </div>
           </div>
           <Projects />
