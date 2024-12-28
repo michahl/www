@@ -13,20 +13,6 @@ export default function Home() {
               <p>
                 I&#39;m a <span className="italic font-serif cursor-context-menu">Software Developer</span> who believes in building creative and modern apps. 
               </p>
-              {/*
-              <p>
-                Inspired by{" "}
-                <span 
-                  className="relative group cursor-pointer italic"
-                >
-                  <span className="hover:underline underline-offset-4">Shuhari</span>
-                  <span className="hover:hidden absolute -top-7 left-12 sm:left-1/2 transform -translate-x-1/2 w-[16.5rem] bg-[#1c1c1c] text-[#cccccc] text-center px-1 py-0.5 border border-[#575757] text-sm rounded-lg shadow-lg opacity-0 group-hover:opacity-100 transition-opacity duration-200">
-                    (n.) philosophy of learning to mastering
-                  </span>
-                </span>
-                , I embrace the stages of learning to continually enhance my skills and knowledge while exploring innovative approaches.
-              </p>
-              */}
             </div>
           </div>
           <Projects />
