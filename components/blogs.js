@@ -4,7 +4,7 @@ import { getAllPosts } from "@/lib/posts"
 export default function Blogs() {
     const posts = getAllPosts();
 
-    if (posts.length === 0) {
+    if (posts.length === 1) {
         return null;
     }
 
@@ -18,7 +18,7 @@ export default function Blogs() {
                         <li key={post.slug} className="text-sm">
                             <Link
                                 href={`/b/${post.slug}`}
-                                className="relative -left-0.5 sm:-left-1.5 text-base text-blue-600 hover:text-blue-800 transition-transform"
+                                className="relative -left-0.5 text-base text-blue-600 hover:text-blue-800 transition-transform"
                             >
                                 {post.frontmatter.title.toLowerCase()}
                             </Link>
