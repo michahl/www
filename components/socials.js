@@ -3,7 +3,7 @@ import { socialLinks } from "@/lib/constants";
 export default function Socials() {
     return (
         <div className="flex justify-center">
-            <div className="mb-2">
+            <div className="mb-5">
                 <div className="flex">
                 {
                     socialLinks.map((social, index) => (
