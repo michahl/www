@@ -16,8 +16,12 @@ async function readPostFile(slug) {
     return null;
   }
 
-  const fileContent = await readFile(filePath, { encoding: "utf8" });
-  return fileContent;
+  try {
+    const fileContent = await readFile(filePath, { encoding: "utf8" });
+    return fileContent;
+  } catch (err) {
+    return null;
+  }
 }
 
 export default async function PostPage({ params }) {
