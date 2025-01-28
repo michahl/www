@@ -1,3 +1,14 @@
+interface SiteConfig {
+    name: string;
+    username: string;
+    description: string;
+    url: string;
+    links: {
+        github: string;
+        email: string;
+    };
+}
+
 export const siteConfig = {
     name: "Michail Christoforatos",
     username: "@michahl",
@@ -5,8 +16,6 @@ export const siteConfig = {
     url: "https://michahl.com",
     links: {
         github: "https://github.com/michahl",
-        twitter: "https://x.com/michahl",
         email: "mailto:hi@michahl.com",
-        linkedin: "https://linkedin.com/in/michahl"
     }
-}
+};

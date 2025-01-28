@@ -1,5 +1,5 @@
 export const Icons = {
-    arrow: (props) => (
+    arrow: (props: React.SVGProps<SVGSVGElement>) => (
         <svg 
             width="100%" 
             height="100%" 
