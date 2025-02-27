@@ -1,3 +1,4 @@
+import Posts from "@/components/posts";
 import Projects from "@/components/projects";
 import Socials from "@/components/socials";
 
@@ -15,9 +16,7 @@ export default function Home() {
             </div>
           </div>
           <Projects />
-          {/*}
-          <Blogs />
-          */}
+          <Posts />
         </div>
       </div>
       <Socials />
