@@ -82,10 +82,10 @@ export default async function BlogPageItem({ params }: { params: { slug: string 
             <div className="max-w-2xl w-full mx-2 sm:mx-5 flex-grow">
                 <div className="my-14 mx-3">
                     <article>
-                        <h1 className="text-[17px] font-medium leading-tight">
+                        <h1 className="text-lg font-medium leading-tight">
                             {data.title}
                         </h1>
-                        <p className="font-light text-[14.5px]">{data.author}</p>
+                        <p className="font-light text-[15px]">{data.author}</p>
                         <div className="mt-10 tracking-tight text-[15.5px]">
                             <MDXRemote source={content} components={MDXComponents} />
                         </div>
