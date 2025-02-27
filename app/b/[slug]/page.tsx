@@ -6,7 +6,7 @@ import Socials from "@/components/socials";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import MDXComponents from "@/components/mdx-components";
 import { Metadata } from "next";
-import { Toaster } from 'sonner'
+import { Toaster } from 'sonner';
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -64,11 +64,11 @@ export async function generateMetadata({
         authors: {
             name: blog.data.author,
         },
-        keywords: blog.data.keywords
+        keywords: blog.data.keywords,
     };
 }
 
-export default async function BlogPageItem({ params }: { params: { slug: string } }) {
+export default function BlogPageItem({ params }: BlogPageItemProps) {
     const filePath = path.join(postsDirectory, `${params.slug}.mdx`);
 
     if (!fs.existsSync(filePath)) {
