@@ -6,6 +6,7 @@ import Socials from "@/components/socials";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import MDXComponents from "@/components/mdx-components";
 import { Metadata } from "next";
+import { Toaster } from 'sonner'
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -79,6 +80,7 @@ export default async function BlogPageItem({ params }: { params: { slug: string 
 
     return (
         <div className="flex flex-col items-center min-h-screen">
+            <Toaster richColors position="top-center" />
             <div className="max-w-2xl w-full mx-2 sm:mx-5 flex-grow">
                 <div className="my-14 mx-3">
                     <article>

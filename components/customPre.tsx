@@ -4,6 +4,7 @@ import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
 import { Icons } from "./icons";
+import { toast } from "sonner";
 
 const CustomPre = ({ className = "", children }: any) => {
     const match = /language-(\w+)/.exec(className || "");
@@ -12,9 +13,9 @@ const CustomPre = ({ className = "", children }: any) => {
 
     const handleCopy = () => {
         navigator.clipboard.writeText(codeString.trim()).then(() => {
-            alert("Code copied to clipboard!");
+            toast.success(<div>Code copied to clipboard!</div>);
         }).catch(err => {
-            console.error("Failed to copy code: ", err);
+            toast.error(<div>Failed to copy the code!</div>);
         });
     };
 
