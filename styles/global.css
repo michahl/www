@@ -4,5 +4,8 @@
 
 body {
     @apply bg-[#111111] text-[#f9f8fc] antialiased;
-    
+}
+
+.hide-scrollbar::-webkit-scrollbar {
+    display: none;
 }
