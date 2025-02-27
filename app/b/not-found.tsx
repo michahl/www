@@ -5,7 +5,7 @@ export default function NotFound() {
     return (
         <div className="flex items-center justify-center min-h-screen">
             <div className="flex flex-col items-center">
-                <p className="text-center">I haven't wrote about this yet.</p>
+                <p className="text-center">I haven&rsquo;t wrote about this yet.</p>
 
                 <div className="mt-2">
                     <Link 

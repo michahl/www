@@ -14,7 +14,7 @@ const CustomPre = ({ className = "", children }: any) => {
     const handleCopy = () => {
         navigator.clipboard.writeText(codeString.trim()).then(() => {
             toast.success(<div>Code copied to clipboard!</div>);
-        }).catch(err => {
+        }).catch(() => {
             toast.error(<div>Failed to copy the code!</div>);
         });
     };
