@@ -9,7 +9,7 @@ const CustomP = (props: React.HTMLAttributes<HTMLParagraphElement>) => <p classN
 const CustomUl = (props: React.HTMLAttributes<HTMLUListElement>) => <ul className="list-disc list-inside my-3" {...props} />;
 const CustomOl = (props: React.HTMLAttributes<HTMLOListElement>) => <ol className="list-decimal list-inside my-2" {...props} />;
 const CustomLi = (props: React.HTMLAttributes<HTMLLIElement>) => <li className="my-1 mx-3" {...props} />;
-const CustomBlockquote = (props: React.HTMLAttributes<HTMLElement>) => <blockquote className="border-l-4 border-zinc-800/90 p-2 my-3" {...props} />;
+const CustomBlockquote = (props: React.HTMLAttributes<HTMLElement>) => <blockquote className="border-l-4 border-zinc-800/90 p-2 my-3 italic" {...props} />;
 
 const CustomMDXComponents = {
     h1: CustomH1,

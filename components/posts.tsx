@@ -32,6 +32,7 @@ function getAllPosts() {
 
         return {
             slug: filename.replace(".mdx", ""),
+            title: data.title || "Untitled",
             ...data,
         };
     });
