@@ -24,7 +24,7 @@ export default function Posts() {
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
-export function getAllPosts() {
+function getAllPosts() {
     return fs.readdirSync(postsDirectory).map((filename) => {
         const filePath = path.join(postsDirectory, filename);
         const fileContent = fs.readFileSync(filePath, "utf-8");
