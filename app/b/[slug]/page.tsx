@@ -5,6 +5,7 @@ import { notFound } from "next/navigation";
 import Socials from "@/components/socials";
 import { MDXRemote } from "next-mdx-remote/rsc";
 import MDXComponents from "@/components/mdx-components";
+import { Metadata } from "next";
 
 const postsDirectory = path.join(process.cwd(), "posts");
 
@@ -26,6 +27,44 @@ export async function generateStaticParams() {
     return posts.map((post) => ({
         slug: post.slug,
     }));
+}
+
+interface BlogPageItemProps {
+    params: {
+        slug: string;
+    };
+}
+
+async function getBlogFromParams(params: BlogPageItemProps["params"]) {
+    const filePath = path.join(postsDirectory, `${params.slug}.mdx`);
+
+    if (!fs.existsSync(filePath)) {
+        return null;
+    }
+
+    const fileContent = fs.readFileSync(filePath, "utf-8");
+    const { content, data } = matter(fileContent);
+
+    return { content, data };
+}
+
+export async function generateMetadata({
+    params,
+}: BlogPageItemProps): Promise<Metadata> {
+    const blog = await getBlogFromParams(params);
+
+    if (!blog) {
+        return {};
+    }
+
+    return {
+        title: blog.data.title,
+        description: blog.data.description,
+        authors: {
+            name: blog.data.author,
+        },
+        keywords: blog.data.keywords
+    };
 }
 
 export default async function BlogPageItem({ params }: { params: { slug: string } }) {

@@ -1,14 +1,94 @@
 ---
-title: "This is an example post"
+title: "Creating an HTTP Server in C++"
 date: "26-02-2025"
-description: "This is a blog post to test the website."
-iamge: "https://placehold.co/600x400"
+description: "Learn how to create a simple HTTP server in C++."
+image: "https://placehold.co/600x400"
+author: "Michail Christoforatos"
+keywords: ["http server with cpp", "http server in c++"]
 ---
 
-# Welcome to My Blog!
 
-This is an MDX-powered blog post in Next.js.
+Creating an HTTP server in C++ can be a great way to understand the basics of network programming. In this post, we will create a simple HTTP server using the Boost.Asio library.
 
-```jsx
-console.log("MDX supports JSX!");
+## Prerequisites
+
+Before we start, make sure you have the following installed:
+
+- A C++ compiler (e.g., g++)
+- Boost library
+
+## Step 1: Setting Up the Project
+
+First, create a new directory for your project and navigate into it:
+
+```sh
+mkdir http-server
+cd http-server
 ```
+
+## Step 2: Installing Boost
+If you haven't installed Boost yet, you can do so by following the instructions on the [Boost website](https://google.com).
+
+## Step 3: Writing the Server Code
+Create a new file named server.cpp and add the following code:
+
+```cpp
+#include <boost/asio.hpp>
+#include <iostream>
+
+using boost::asio::ip::tcp;
+
+void handle_request(tcp::socket& socket) {
+    boost::system::error_code error;
+    boost::asio::streambuf request;
+    boost::asio::read_until(socket, request, "\r\n", error);
+
+    if (!error) {
+        std::istream request_stream(&request);
+        std::string request_method;
+        std::string request_uri;
+        std::string request_version;
+        request_stream >> request_method >> request_uri >> request_version;
+
+        std::cout << "Received request: " << request_method << " " << request_uri << " " << request_version << std::endl;
+
+        std::string response = "HTTP/1.1 200 OK\r\nContent-Type: text/plain\r\n\r\nHello, World!";
+        boost::asio::write(socket, boost::asio::buffer(response), error);
+    }
+}
+
+int main() {
+    try {
+        boost::asio::io_context io_context;
+        tcp::acceptor acceptor(io_context, tcp::endpoint(tcp::v4(), 8080));
+
+        std::cout << "Server is running on port 8080..." << std::endl;
+
+        while (true) {
+            tcp::socket socket(io_context);
+            acceptor.accept(socket);
+            handle_request(socket);
+        }
+    } catch (std::exception& e) {
+        std::cerr << "Exception: " << e.what() << std::endl;
+    }
+
+    return 0;
+}
+```
+
+## Step 4: Compiling the Server
+Compile the server using the following command:
+```
+g++ -o server server.cpp -lboost_system
+```
+
+## Step 5: Running the Server
+Run the server using the following command:
+```
+./server
+```
+The server will start and listen for incoming HTTP requests on port 8080. You can test it by opening a web browser and navigating to `http://localhost:8080`. You should see the message "Hello, World!".
+
+## Conclusion
+In this post, we created a simple HTTP server in C++ using the Boost.Asio library. This server can handle basic HTTP requests and respond with a simple message. You can extend this server to handle more complex requests and responses as needed.
