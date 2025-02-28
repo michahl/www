@@ -10,13 +10,15 @@ export default function Posts() {
         <div className="mx-3.5">
             <h3>notes</h3>
             <ul className="list-disc list-inside">
-                {posts.map((post) => (
-                    <li key={post.slug}>
-                        <Link href={`/b/${post.slug}`} className="text-blue-500 hover:text-blue-700 text-[15px] leading-4">
-                            {post.title.toLowerCase()}
-                        </Link>
-                    </li>
-                ))}
+                {
+                    posts.length > 0 ? posts.map((post) => (
+                        <li key={post.slug}>
+                            <Link href={`/b/${post.slug}`} className="text-blue-500 hover:text-blue-700 text-[15px] leading-4">
+                                {post.title.toLowerCase()}
+                            </Link>
+                        </li>
+                    )) : <></>
+                }
             </ul>
         </div>
     );
