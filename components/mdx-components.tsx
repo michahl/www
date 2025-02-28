@@ -10,6 +10,7 @@ const CustomUl = (props: React.HTMLAttributes<HTMLUListElement>) => <ul classNam
 const CustomOl = (props: React.HTMLAttributes<HTMLOListElement>) => <ol className="list-decimal list-inside my-2" {...props} />;
 const CustomLi = (props: React.HTMLAttributes<HTMLLIElement>) => <li className="my-1 mx-3" {...props} />;
 const CustomBlockquote = (props: React.HTMLAttributes<HTMLElement>) => <blockquote className="border-l-4 border-zinc-800/90 p-2 my-3 italic" {...props} />;
+const CustomCode = (props: React.HTMLAttributes<HTMLElement>) => <code className="bg-[#1C1F21] text-[#C4C8C6] px-2 py-1 rounded-md text-sm" {...props} />;
 
 const CustomMDXComponents = {
     h1: CustomH1,
@@ -22,6 +23,7 @@ const CustomMDXComponents = {
     ol: CustomOl,
     li: CustomLi,
     blockquote: CustomBlockquote,
+    code: CustomCode,
 };
 
 export default CustomMDXComponents;

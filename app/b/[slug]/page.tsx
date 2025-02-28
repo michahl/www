@@ -5,6 +5,7 @@ import MDXComponents from "@/components/mdx-components";
 import Socials from "@/components/socials";
 import { Toaster } from 'sonner';
 import { notFound } from "next/navigation";
+import { siteConfig } from "@/config/site";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
     const posts = getAllPosts();
@@ -31,6 +32,12 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
     return {
         title: data.title,
         description: data.description,
+        authors: [
+            {
+                name: data.author,
+                url: siteConfig.url,
+            }
+        ],
         keywords: data.keywords || [],
         twitter: {
             title: data.title,
@@ -38,6 +45,8 @@ export async function generateMetadata({ params }: { params: Params }): Promise<
             images: data.image ? [data.image] : [],
         },
         openGraph: {
+            type: "website",
+            locale: "en_US",
             title: data.title,
             description: data.description,
             images: data.image ? [data.image] : [],
