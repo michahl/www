@@ -4,7 +4,6 @@ import { Analytics } from "@vercel/analytics/react";
 import { Rubik } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import "../styles/global.css";
-import PageTransition from "@/components/page-animation";
 
 const rubik = Rubik({ subsets: ["latin"] });
 
@@ -67,7 +66,7 @@ export default function RootLayout({
       <body
         className={`${rubik.className} antialiased`}
       >
-        <PageTransition>{children}</PageTransition>
+        {children}
         <SpeedInsights />
         <Analytics />
       </body>
