@@ -12,7 +12,7 @@ const CustomPre = ({ className = "", children }: any) => {
 
     return (
         <div className="relative group">
-            <CopyToClipboard children={children} />
+            <CopyToClipboard>{children}</CopyToClipboard>
             <SyntaxHighlighter
                 style={atomDark}
                 language={language}

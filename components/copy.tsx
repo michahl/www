@@ -10,14 +10,18 @@ export default function CopyToClipboard({ children }: any) {
     const codeString = children.props?.children || "";
 
     const handleCopy = () => {
-        navigator.clipboard.writeText(codeString.trim()).then(() => {
-            setCopied(true);
-            setTimeout(() => {
-                setCopied(false);
-            }, 2000);
-        }).catch(() => {
-            toast.error(<div>Failed to copy to clipboard!</div>);
-        });
+        if (navigator.clipboard && navigator.clipboard.writeText) {
+            navigator.clipboard.writeText(codeString.trim()).then(() => {
+                setCopied(true);
+                setTimeout(() => {
+                    setCopied(false);
+                }, 2000);
+            }).catch(() => {
+                toast.error(<div>Failed to copy to clipboard!</div>);
+            });
+        } else {
+            toast.error(<div>Clipboard API not supported!</div>);
+        }
     };
 
     const icon = copied ? (
