@@ -9,17 +9,13 @@ export default function Socials() {
                     socialLinks.map((social, index) => (
                     <a 
                         key={index} 
-                        target="_blank"
+                        target={social.target}
                         href={social.href}
                         className={`
-                            text-[#d9d9d9] hover:text-[#f9f8fc] transition-colors
-                            flex items-center justify-center p-1
-                            
+                            text-[15.75px] text-[#d9d9d9e9] hover:text-[#f9f8fc] transition-colors
+                            flex items-center justify-center p-1   
                         `}
                     >
-                        {/*
-                        <social.icon className="p-3 rounded-md w-10 h-10" />
-                        */}
                         <p className="p-3">{social.title}</p>
                     </a>
                     ))

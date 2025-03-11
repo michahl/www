@@ -1,8 +1,3 @@
-export const tags: string[] = [
-    "Software Developer",
-    "Fullstack Developer",
-];
-
 export interface Project {
     title: string;
     description: string;
@@ -17,13 +12,10 @@ export const projects: Project[] = [
     }
 ];
 
-import { LuMails } from "react-icons/lu";
-import { FiGithub } from "react-icons/fi";
-
 export interface SocialLink {
     title: string;
     href: string;
-    icon?: React.ComponentType;
+    target?: string;
 }
 
 export const socialLinks: SocialLink[] = [
@@ -34,11 +26,11 @@ export const socialLinks: SocialLink[] = [
     {
         title: "email",
         href: "mailto:hi@michahl.com",
-        icon: LuMails
+        target: "_blank"
     },
     {
         title: "github",
         href: "https://github.com/michahl",
-        icon: FiGithub
+        target: "_blank"
     }
 ];
