@@ -34,3 +34,11 @@ export async function getBlogFromParams(params: BlogPageItemProps["params"]) {
         return null; // If file does not exist, return null
     }
 }
+
+export function calculateReadingTime(content: string) {
+    const wordsPerMinute = 238;
+    const words = content.split(" ").length;
+    const minutes = words / wordsPerMinute;
+    const readTime = Math.ceil(minutes);
+    return readTime;
+}
