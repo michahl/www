@@ -3,30 +3,16 @@
 import React from "react";
 import { Prism as SyntaxHighlighter } from "react-syntax-highlighter";
 import { atomDark } from "react-syntax-highlighter/dist/esm/styles/prism";
-import { Icons } from "./icons";
-import { toast } from "sonner";
+import CopyToClipboard from "./copy";
 
 const CustomPre = ({ className = "", children }: any) => {
     const match = /language-(\w+)/.exec(className || "");
     const codeString = children.props?.children || "";
     const language = match ? match[1] : children.props?.className?.replace("language-", "") || "plaintext";
 
-    const handleCopy = () => {
-        navigator.clipboard.writeText(codeString.trim()).then(() => {
-            toast.success(<div>Code copied to clipboard!</div>);
-        }).catch(() => {
-            toast.error(<div>Failed to copy the code!</div>);
-        });
-    };
-
     return (
         <div className="relative group">
-            <button
-                onClick={handleCopy}
-                className="absolute right-3 top-3 opacity-0 group-hover:opacity-100 transition-opacity text-zinc-400 duration-300"
-            >
-                <Icons.copy_2 className="w-4 h-4" />
-            </button>
+            <CopyToClipboard children={children} />
             <SyntaxHighlighter
                 style={atomDark}
                 language={language}

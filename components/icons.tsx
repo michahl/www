@@ -73,5 +73,21 @@ export const Icons = {
             </path>
             <path d="M16 12.9C16 9.4 14.6 8 11.1 8"></path>
         </svg>
+    ),
+    check: (props: React.SVGProps<SVGSVGElement>) => (
+        <svg
+        aria-hidden="true"
+        fill="none"
+        focusable="false"
+        role="presentation"
+        stroke="currentColor"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth={2}
+        viewBox="0 0 24 24"
+        {...props}
+      >
+        <polyline points="20 6 9 17 4 12" />
+      </svg>
     )
 }

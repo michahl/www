@@ -69,10 +69,10 @@ export default async function BlogPageItem({ params }: { params: Params }) {
         <div className="flex flex-col items-center min-h-screen">
             <Toaster richColors position="top-center" />
             <div className="max-w-2xl w-full mx-2 sm:mx-5 flex-grow">
-                <div className="my-12 mx-3">
+                <div className="my-10 mx-3">
                     <div className="w-full flex justify-end">
                         <Link href="/" 
-                            className="flex items-center gap-1.5 text-sm text-blue-500 hover:text-blue-700"
+                            className="mb-2 sm:mb-0 flex items-center gap-1.5 text-sm text-blue-500 hover:text-blue-700"
                         >
                             <Icons.chevron_left className="w-4 h-4" />
                             back to home
