@@ -25,7 +25,7 @@ const CustomPre = ({ className = "", children }: any) => {
                 onClick={handleCopy}
                 className="absolute right-3 top-3 opacity-0 group-hover:opacity-100 transition-opacity text-zinc-400 duration-300"
             >
-                <Icons.copy className="w-5 h-5" />
+                <Icons.copy_2 className="w-4 h-4" />
             </button>
             <SyntaxHighlighter
                 style={atomDark}
