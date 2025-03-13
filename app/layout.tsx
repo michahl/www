@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Analytics } from "@vercel/analytics/react";
+import { SpeedInsights } from "@vercel/speed-insights/next";
 import { Rubik } from "next/font/google";
 import { siteConfig } from "@/config/site";
 import TransitionProvider from "@/components/transition-provider";
@@ -63,6 +64,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
         className={`${rubik.className} antialiased`}
       >
         <TransitionProvider>{children}</TransitionProvider>
+        <SpeedInsights />
         <Analytics />
       </body>
     </html>
