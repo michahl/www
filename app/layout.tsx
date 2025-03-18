@@ -6,7 +6,7 @@ import { siteConfig } from "@/config/site";
 import TransitionProvider from "@/components/transition-provider";
 import "../styles/global.css";
 
-const rubik = Rubik({ subsets: ["latin"] });
+const rubik = Rubik({ subsets: ["latin"], display: "swap" });
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteConfig.url),
