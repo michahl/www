@@ -5,7 +5,7 @@ import { Icons } from "./icons"
 export default function Projects() {
   return (
     <div className="mt-5">
-        <p className="mx-3.5">projects</p>
+        <p className="mx-3.5">Code</p>
             <div className="grid grid-cols-1 gap-1 mt-0.5">
                 {
                     projects.map(project => (
