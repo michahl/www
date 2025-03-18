@@ -4,21 +4,15 @@ import Socials from "@/components/socials";
 
 export default function Home() {
   return (
-    <div className="flex flex-col items-center min-h-screen ">
-      <div className="max-w-2xl w-full mx-2 sm:mx-5 flex-grow">
-        <div className="my-14">
-          <div className="mx-3.5">
-            <h1>Michail Christoforatos</h1>
-            <div className="my-10 text-[15px] font-light">
-              <p>
-                I&#39;m a <span className="italic font-serif cursor-context-menu">Software Developer</span> who believes in building creative and modern apps. 
-              </p>
-            </div>
-          </div>
-          <Projects />
-          <Posts />
-        </div>
-      </div>
+    <div className="min-h-screen flex flex-col justfiy-between pt-0 md:pt-8 p-2 md:p-8">
+      <main className="max-w-[38rem] mx-auto w-full space-y-6 flex-grow">
+        <h1 className="mx-3.5 pt-12">Michail Christoforatos</h1>
+        <p className="mx-3.5">
+          I&#39;m a <span className="italic font-serif cursor-context-menu">Software Developer</span> who believes in building creative and modern apps. 
+        </p>
+        <Posts />
+        <Projects />
+      </main>
       <Socials />
     </div>
   );
