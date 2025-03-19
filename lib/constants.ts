@@ -8,7 +8,7 @@ export const projects: Project[] = [
     {
         title: "good-first-issue",
         description: 'find "good first issues" on github',
-        href: "https://bugscout.michahl.com"
+        href: "https://good-first-issu.vercel.app"
     }
 ];
 
