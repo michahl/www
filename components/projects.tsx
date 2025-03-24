@@ -16,10 +16,12 @@ export default function Projects() {
                             className="group flex justify-between items-center rounded-lg px-3.5 py-3 hover:bg-zinc-900/65 transition-colors"
                         >
                             <div>
-                                <h3 className="text-[15px] leading-4">
+                                <h3 className="text-[15px] font-light leading-4">
                                     {project.title}
                                 </h3>
-                                <p className="text-[15px] font-light">{project.description}</p>
+                                <p className="text-[#a0a0a0] text-[13px] leading-4">
+                                    {project.description}
+                                </p>
                             </div>
                             <Icons.arrow className="text-[#a0a0a0] w-3.5 h-3.5 group-hover:rotate-45 transition-all ease-in-out duration-500"/>
                         </Link>
