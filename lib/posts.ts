@@ -15,14 +15,22 @@ export function getAllPosts() {
         return [];
     }
 
-    return fs.readdirSync(postsDirectory).map((filename) => {
+    return fs.readdirSync(postsDirectory)
+    .filter((filename) => filename !== "template.mdx" && filename.endsWith(".mdx"))
+    .map((filename) => {
         const filePath = path.join(postsDirectory, filename);
         const fileContent = fs.readFileSync(filePath, "utf-8");
         const { data } = matter(fileContent);
 
+
         return {
             slug: filename.replace(".mdx", ""),
-            ...data,
+            title: data.title || "Untitled",
+            date: data.date || "Unknown Date",
+            description: data.description || "",
+            image: data.image || "",
+            author: data.author || "Unknown Author", 
+            keywords: data.keywords || [],
         };
     });
 }
