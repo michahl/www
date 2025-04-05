@@ -7,7 +7,6 @@ import { Toaster } from 'sonner';
 import { notFound } from "next/navigation";
 import { siteConfig } from "@/config/site";
 import Link from "next/link";
-import { Icons } from "@/components/icons";
 import CustomMDXComponents from "@/components/mdx-components";
 
 export async function generateStaticParams(): Promise<{ slug: string }[]> {
@@ -17,7 +16,7 @@ export async function generateStaticParams(): Promise<{ slug: string }[]> {
     }));
 }
 
-type Params = { slug: string };
+type Params = Promise<{ slug: string }>;
 
 export async function generateMetadata({ params }: { params: Params }): Promise<Metadata> {
     const { slug } = await params;
@@ -65,7 +64,6 @@ export default async function BlogPageItem({ params }: { params: Params }) {
         return notFound();
     }
     const { content, data } = blog;
-    console.log(content)
 
     return (
         <div className="flex flex-col items-center min-h-screen">

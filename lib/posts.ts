@@ -11,6 +11,10 @@ interface BlogPageItemProps {
 }
 
 export function getAllPosts() {
+    if (!fs.existsSync(postsDirectory)) {
+        return [];
+    }
+
     return fs.readdirSync(postsDirectory).map((filename) => {
         const filePath = path.join(postsDirectory, filename);
         const fileContent = fs.readFileSync(filePath, "utf-8");
