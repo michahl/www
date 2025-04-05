@@ -65,9 +65,9 @@ export default async function BlogPageItem({ params }: { params: Params }) {
     const { content, data } = blog;
 
     return (
-        <div className="h-dvh flex flex-col justify-between items-center pt-0 md:pt-8 p-2 md:p-8">
+        <div className="flex flex-col items-center min-h-screen">
             <Toaster richColors position="top-center" />
-            <main className="max-w-[38rem] w-full mx-2 sm:mx-5 flex-grow">
+            <div className="max-w-2xl w-full mx-2 sm:mx-5 flex-grow">
                 <div className="my-10 mx-3">
                     <article>
                         <h1 className="text-lg font-medium leading-tight">
@@ -81,7 +81,7 @@ export default async function BlogPageItem({ params }: { params: Params }) {
                         </div>
                     </article>
                 </div>
-            </main>
+            </div>
             <Socials />
         </div>
     );
